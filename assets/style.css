@@ -1,0 +1,13 @@
+body {
+    font-family: monospace, sans-serif;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+.navbar-brand{
+    font-size: 1.5rem;
+    font-weight:bold;
+}
+.dashboard p{
+    font-size:2.2rem;
+    font-weight: bold;
+}
