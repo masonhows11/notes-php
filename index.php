@@ -8,11 +8,11 @@ if ($uri === '/') {
 
     require 'controllers/index.php';
 
-} elseif ($uri === '/about') {
+} else if ($uri === '/about') {
 
     require 'controllers/about.php';
 
-} elseif ($uri === '/contact') {
+} else if ($uri === '/contact') {
 
     require 'controllers/contact.php';
 }

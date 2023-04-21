@@ -40,13 +40,13 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link  <?= urlIs('/') ? 'active' : '' ?>  " href="/">Home</a>
+                    <a href="/" class="nav-link  <?= urlIs('/') ? 'active' : '' ?>" >Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= urlIs('/about') ? 'active' : '' ?> " href="/about">About</a>
+                    <a href="/about" class="nav-link <?= urlIs('/about') ? 'active' : '' ?> " >About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= urlIs('/contact') ? 'active' : '' ?> " href="/contact">Contact</a>
+                    <a href="/contact" class="nav-link <?= urlIs('/contact') ? 'active' : '' ?> " >Contact</a>
                 </li>
 
             </ul>
