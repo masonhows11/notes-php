@@ -8,16 +8,34 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/">Home</a>
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link <?php /*if($_SERVER['REQUEST_URI'] == '/about.php') { echo  "active"; } else { echo " ";}  */ ?> " href="/about.php">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about.php">About</a>
+                    <a class="nav-link <?php /*if($_SERVER['REQUEST_URI'] == '/contact.php') { echo  "active"; } else { echo " ";}  */ ?> " href="/contact.php">Contact</a>
+                </li>-->
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link <? /*=  $_SERVER['REQUEST_URI'] === '/' ? 'active' : ''  */ ?>  " href="/">Home</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link <? /*=  $_SERVER['REQUEST_URI'] === '/about.php' ? 'active' : ''  */ ?> " href="/about.php">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <? /*=  $_SERVER['REQUEST_URI'] === '/contact.php' ? 'active' : ''  */ ?> " href="/contact.php">Contact</a>
+                </li>-->
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/contact.php">Contact</a>
+                    <a class="nav-link  <?= urlIs('/') ? 'active' : '' ?>  " href="/">Home</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link <?= urlIs('/about.php') ? 'active' : '' ?> " href="/controlers/about.php">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <?= urlIs('/contact.php') ? 'active' : '' ?> " href="/controlers/contact.php">Contact</a>
+                </li>
+
             </ul>
         </div>
     </div>
