@@ -16,6 +16,7 @@
                     <a class="nav-link <?php /*if($_SERVER['REQUEST_URI'] == '/contact.php') { echo  "active"; } else { echo " ";}  */ ?> " href="/contact.php">Contact</a>
                 </li>-->
 
+                
                 <!-- <li class="nav-item">
                     <a class="nav-link <? /*=  $_SERVER['REQUEST_URI'] === '/' ? 'active' : ''  */ ?>  " href="/">Home</a>
                 </li>
@@ -26,14 +27,26 @@
                     <a class="nav-link <? /*=  $_SERVER['REQUEST_URI'] === '/contact.php' ? 'active' : ''  */ ?> " href="/contact.php">Contact</a>
                 </li>-->
 
+
+              <!--  <li class="nav-item">
+                    <a class="nav-link  <?/*= urlIs('/') ? 'active' : '' */?>  " href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <?/*= urlIs('/about.php') ? 'active' : '' */?> " href="/controllers/about.php">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <?/*= urlIs('/contact.php') ? 'active' : '' */?> " href="/controllers/contact.php">Contact</a>
+                </li>-->
+
+
                 <li class="nav-item">
                     <a class="nav-link  <?= urlIs('/') ? 'active' : '' ?>  " href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= urlIs('/about.php') ? 'active' : '' ?> " href="/controlers/about.php">About</a>
+                    <a class="nav-link <?= urlIs('/about') ? 'active' : '' ?> " href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= urlIs('/contact.php') ? 'active' : '' ?> " href="/controlers/contact.php">Contact</a>
+                    <a class="nav-link <?= urlIs('/contact') ? 'active' : '' ?> " href="/contact">Contact</a>
                 </li>
 
             </ul>
