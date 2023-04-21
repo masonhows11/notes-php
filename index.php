@@ -4,15 +4,15 @@ require 'functions.php';
 
 $uri = $_SERVER['REQUEST_URI'];
 
-if ($uri === '/') {
+if ($uri == '/') {
 
-    require 'controllers/index.php';
+    require 'controllers/home.php';
 
-} else if ($uri === '/about') {
+} else if ($uri == '/about') {
 
     require 'controllers/about.php';
 
-} else if ($uri === '/contact') {
+} else if ($uri == '/contact') {
 
     require 'controllers/contact.php';
 }
