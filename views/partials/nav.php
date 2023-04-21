@@ -16,7 +16,7 @@
                     <a class="nav-link <?php /*if($_SERVER['REQUEST_URI'] == '/contact.php') { echo  "active"; } else { echo " ";}  */ ?> " href="/contact.php">Contact</a>
                 </li>-->
 
-                
+
                 <!-- <li class="nav-item">
                     <a class="nav-link <? /*=  $_SERVER['REQUEST_URI'] === '/' ? 'active' : ''  */ ?>  " href="/">Home</a>
                 </li>
