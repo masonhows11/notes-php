@@ -4,7 +4,7 @@
 
 <div class="container-fluid d-flex justify-content-evenly">
     <div class="col-lg-10 ">
-        <p>Now you are on the about page</p>
+        <p>Now you are on the posts page</p>
     </div>
 </div>
 
