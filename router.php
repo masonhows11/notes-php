@@ -17,6 +17,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes = [
     '/' => 'controllers/home.php',
+    '/posts' => 'controllers/post.view.php',
     '/about' => 'controllers/about.php',
     '/contact' => 'controllers/contact.php'
 ];

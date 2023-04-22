@@ -43,6 +43,9 @@
                     <a href="/" class="nav-link  <?= urlIs('/') ? 'active' : '' ?>" >Home</a>
                 </li>
                 <li class="nav-item">
+                    <a href="/posts" class="nav-link  <?= urlIs('/posts') ? 'active' : '' ?>" >Posts</a>
+                </li>
+                <li class="nav-item">
                     <a href="/about" class="nav-link <?= urlIs('/about') ? 'active' : '' ?> " >About</a>
                 </li>
                 <li class="nav-item">
