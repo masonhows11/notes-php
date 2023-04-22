@@ -6,6 +6,6 @@ $db = new Database($config['database']);
 
 $heading = 'My Posts';
 
-$posts = $db->query('select * from posts')->fetchAll();
+$posts = $db->query('select * from posts')->get();
 
 require "views/posts.view.php";

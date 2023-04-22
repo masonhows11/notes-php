@@ -6,11 +6,9 @@ $db = new Database($config['database']);
 
 $heading = 'My Post';
 
-$post = $db->query('select * from posts where id = :id ', ['id' => $_GET['id']])->find();
+$post = $db->query('select * from posts where id = :id ', ['id' => $_GET['id']])->findOrFail();
 
-if (!$post) {
-    abort();
-}
+
 
 if ($post['user_id'] !== 7) {
     abort(Response::FORBIDDEN);
