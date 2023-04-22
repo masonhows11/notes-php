@@ -1,5 +1,5 @@
 <?php
-require 'Database.php';
+
 $config = require('config.php');
 
 $db = new Database($config['database']);
@@ -13,7 +13,7 @@ if (!$post) {
 }
 
 if ($post['user_id'] !== 7) {
-    abort(403);
+    abort(Response::FORBIDDEN);
 }
 
 require "views/post.view.php";
