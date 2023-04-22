@@ -17,7 +17,7 @@
         </div>
         <div class="col-lg-5">
             <p>
-                <a href="/create" class="ms-3 text-decoration-none">Create Post</a>
+                <a href="/post/create" class="ms-3 text-decoration-none">Create Post</a>
             </p>
         </div>
     </div>
