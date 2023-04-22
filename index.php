@@ -8,15 +8,19 @@ require 'router.php';
 
 // connect to our mysql database
 
-$servername = "localhost";
-$username = "root";
-$password = "1289..//";
+$host = "localhost";
+$user = "root";
+$pass = "1289..//";
+$dbname = 'demoDb';
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=demoDb", $username, $password);
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
-} catch(PDOException $e) {
+    $statement = $conn->prepare('select * from posts');
+    $statement->execute();
+    $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+    dd($posts);
+} catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
