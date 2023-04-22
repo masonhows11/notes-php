@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="row d-flex flex-column">
         <div class="col-lg-5">
-            <ul>
+            <ul class="list-unstyled ms-3">
                 <?php foreach ($posts as $post) : ?>
                     <li>
                         <a href="/post?id=<?= $post['id'] ?>" class="text-decoration-none text-dark">

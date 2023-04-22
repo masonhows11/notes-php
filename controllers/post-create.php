@@ -1,5 +1,5 @@
 <?php
 
-$heading = 'Create Post';
+$heading = 'Create post';
 
 require "views/post-create.view.php";
