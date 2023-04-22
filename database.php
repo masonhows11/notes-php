@@ -12,21 +12,13 @@ class database
 
     public $connection;
 
-    public function __construct()
+    public function __construct($config)
     {
-
-        $config = [
-
-            'host' => 'localhost',
-            'port' => 3306,
-            'user' => 'root',
-            'pass' => '1289..//',
-            'dbname' => 'demoDb',
-        ];
-
-        $this->connection = new PDO("mysql:host={$config['host']};port={$config['port']};dbname={$config['dbname']};charset=utf8mb4",
-            $config['user'],
-            $config['pass'],[
+        $this->connection = new PDO("mysql:host={$config['database']['host']};
+            port={$config['database']['port']};
+            dbname={$config['database']['dbname']};charset=utf8mb4",
+            $config['database']['user'],
+            $config['database']['pass'],[
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]);
         // set the PDO error mode to exception
