@@ -12,7 +12,7 @@
 </div>
 <div class="container-fluid d-flex justify-content-evenly">
     <div class="col-lg-10">
-        <a href="/posts">Posts</a>
+        <a href="/posts" class="text-decoration-none text-primary">Posts</a>
     </div>
 </div>
 

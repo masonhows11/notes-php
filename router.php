@@ -1,29 +1,8 @@
 <?php
-//  if ($uri == '/') {
-//
-//    require 'controllers/home.php';
-//
-//  } else if ($uri == '/about') {
-//
-//    require 'controllers/about.php';
-//
-//  } else if ($uri == '/contact') {
-//
-//    require 'controllers/contact.php';
-//  }
+
+$routes = require('routes.php');
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
-
-
-$routes = [
-    '/' => 'controllers/home.php',
-    '/posts' => 'controllers/posts.php',
-    '/post' => 'controllers/post.php',
-    '/about' => 'controllers/about.php',
-    '/contact' => 'controllers/contact.php'
-];
-
-
 
 function routeToController($uri, $routes)
 {
