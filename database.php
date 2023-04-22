@@ -14,11 +14,11 @@ class database
 
     public function __construct($config)
     {
-        $this->connection = new PDO("mysql:host={$config['database']['host']};
-            port={$config['database']['port']};
-            dbname={$config['database']['dbname']};charset=utf8mb4",
-            $config['database']['user'],
-            $config['database']['pass'],[
+        $this->connection = new PDO("mysql:host={$config['host']};
+            port={$config['port']};
+            dbname={$config['dbname']};charset=utf8mb4",
+            $config['user'],
+            $config['pass'],[
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]);
         // set the PDO error mode to exception
