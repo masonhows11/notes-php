@@ -20,7 +20,12 @@ try {
     $statement = $conn->prepare('select * from posts');
     $statement->execute();
     $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
-    dd($posts);
+    foreach ($posts as $post) {
+        echo "<ul>" .
+              "<li>" . $post['title'] . "</li>"
+            . "</ul>";
+
+    }
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
