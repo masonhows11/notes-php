@@ -16,7 +16,7 @@ class database
     {
         $this->connection = new PDO("mysql:host={$config['host']};
             port={$config['port']};
-            dbname={$config['dbname']};charset=utf8mb3_persian_ci",
+            dbname={$config['dbname']};charset=utf8mb4",
             $config['user'],
             $config['pass'],[
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
