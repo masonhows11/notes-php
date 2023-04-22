@@ -9,7 +9,7 @@ require 'database.php';
 
 
 $db = new Database();
-$posts = $db->query("select * from posts where id = 1");
+$posts = $db->query("select * from posts")->fetchAll();
 
 dd($posts);
 
