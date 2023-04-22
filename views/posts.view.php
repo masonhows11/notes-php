@@ -6,7 +6,11 @@
     <div class="col-lg-10 ">
         <ul>
         <?php foreach ($posts as $post) :?>
-            <li><?= $post['title'] . " " . $post['description'] ?></li>
+            <li>
+                <a href="/post?id=<?= $post['id'] ?>" class="">
+                    <?= $post['title']  ?>
+                </a>
+            </li>
         <?php endforeach; ?>
         </ul>
     </div>
