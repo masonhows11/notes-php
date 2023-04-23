@@ -3,8 +3,9 @@
 <?php require('views/partials/banner.php') ?>
 
 <div class="container-fluid">
-    <div class="row d-flex flex-column">
-        <div class="col-lg-5">
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-10">
             <ul class="list-unstyled ms-3">
                 <?php foreach ($posts as $post) : ?>
                     <li>
@@ -15,7 +16,9 @@
                 <?php endforeach; ?>
             </ul>
         </div>
-        <div class="col-lg-5">
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-10">
             <p>
                 <a href="/post/create" class="ms-3 text-decoration-none">Create Post</a>
             </p>
