@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $errors_title = [];
     $errors_body = [];
+   
 
     if (empty($_POST['title']) && empty($_POST['body'])) {
         $errors_title['title'] = 'title is required';
