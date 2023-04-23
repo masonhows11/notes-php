@@ -5,38 +5,40 @@
 <div class="container-fluid d-flex justify-content-center">
     <div class="col-lg-5">
 
-        <form  method="post" >
+        <form method="post">
 
             <div class="mb-3">
+
                 <label for="title" class="form-label">title</label>
-                <input type="text" name="title" class="form-control" id="title">
+                <input type="text" name="title" class="form-control" id="title" placeholder="enter title">
 
-                <?php if(isset($errors['title'])) : ?>
-                    <div class="alert alert-danger">
-                        <?php echo $errors['title'] ?>
-                    </div>
-                <?php endif; ?>
+                <?php if (isset($errors_title['title'])) : ?>
+                <div class="alert alert-danger mt-4">
+                    <?= $errors_title['title'] ?>
+                </div>
+                <?php endif;  ?>
 
             </div>
 
             <div class="mb-3">
-                <label for="body" class="form-label">Example textarea</label>
-                <textarea class="form-control" name="body" id="body" rows="3">
-                </textarea>
 
-                <?php if(isset($errors['body'])) : ?>
-                <div class="alert alert-danger">
-                    <?php echo $errors['body'] ?>
-                </div>
-                <?php endif; ?>
+                <label for="body" class="form-label">Body</label>
+                <textarea class="form-control" name="body" id="body" rows="3" placeholder="enter body"></textarea>
+
+                <?php if (isset( $errors_body['body'])) : ?>
+                    <div class="alert alert-danger mt-4">
+                        <?=  $errors_body['body'] ?>
+                    </div>
+                <?php endif;  ?>
 
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+
         </form>
 
     </div>
 </div>
 
 
-<?php require('views/partials/footer.php') ?>
+<?php require ('views/partials/footer.php') ?>

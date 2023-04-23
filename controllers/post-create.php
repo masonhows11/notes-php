@@ -7,14 +7,17 @@ $heading = 'Create post';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $errors = [];
+    $errors_title = [];
+    $errors_body = [];
 
-    if (strlen($_POST['title']) == 0 && strlen($_POST['body']) == 0) {
-        $errors['title'] = 'title is required';
-        $errors['body'] = 'body is required';
+    if (empty($_POST['title']) && empty($_POST['body'])) {
+
+        $errors_title['title'] = 'title is required';
+        $errors_body['body'] = 'body is required';
     }
 
-    if (empty($errors)) {
+
+    if (empty($errors_title) && empty($errors_body)) {
         $db->query('insert into posts(title,body,user_id) values (:title,:body,:user_id)', [
             'title' => $_POST['title'], 'body' => $_POST['body'], 'user_id' => 10,
         ]);

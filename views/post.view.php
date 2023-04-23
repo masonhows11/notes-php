@@ -6,7 +6,7 @@
     <div class="col-lg-10">
 
         <h1><?= htmlspecialchars($post['title'])  ?></h1>
-        <p><?= htmlspecialchars($post['description']) ?></p>
+        <p><?= htmlspecialchars($post['body']) ?></p>
 
     </div>
 </div>
