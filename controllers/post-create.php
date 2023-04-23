@@ -10,13 +10,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors_title = [];
     $errors_body = [];
    
-
+   
+    // dd($_POST['body']);
+    
     if (empty($_POST['title']) && empty($_POST['body'])) {
+
         $errors_title['title'] = 'title is required';
         $errors_body['body'] = 'body is required';
     }
 
-    if (strlen($_POST['body'] > 10)) {
+    if (strlen($_POST['body']) > 10) {
+
         $errors_body['body'] = 'maximum characters is 10';
     }
 
