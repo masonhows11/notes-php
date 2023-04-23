@@ -2,6 +2,8 @@
 <?php require('views/partials/nav.php') ?>
 <?php require('views/partials/banner.php') ?>
 
+<?php dd($_SERVER); ?>
+
 <div class="container-fluid d-flex justify-content-evenly">
     <div class="col-lg-10">
 
