@@ -9,7 +9,7 @@
                 <?php foreach ($posts as $post) : ?>
                     <li>
                         <a href="/post?id=<?= $post['id'] ?>" class="text-decoration-none text-dark">
-                            <?= $post['title'] ?>
+                            <?= htmlspecialchars($post['title']) ?>
                         </a>
                     </li>
                 <?php endforeach; ?>

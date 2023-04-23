@@ -5,8 +5,8 @@
 <div class="container-fluid d-flex justify-content-evenly">
     <div class="col-lg-10">
 
-        <h1><?= $post['title'] ?></h1>
-        <p><?= $post['description'] ?></p>
+        <h1><?= htmlspecialchars($post['title'])  ?></h1>
+        <p><?= htmlspecialchars($post['description']) ?></p>
 
     </div>
 </div>
