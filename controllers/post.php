@@ -10,7 +10,7 @@ $post = $db->query('select * from posts where id = :id ', ['id' => $_GET['id']])
 
 
 
-if ($post['user_id'] !== 7) {
+if ($post['user_id'] !== 10) {
     abort(Response::FORBIDDEN);
 }
 
