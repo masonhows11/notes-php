@@ -14,4 +14,4 @@ if ($post['user_id'] !== 10) {
     abort(Response::FORBIDDEN);
 }
 
-require "views/post.view.php";
+require "views/posts/post.view.php";
