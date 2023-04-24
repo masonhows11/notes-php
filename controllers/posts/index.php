@@ -14,4 +14,4 @@ try {
 }
 
 
-require "views/posts/posts.view.php";
+require "views/posts/index.view.php";
