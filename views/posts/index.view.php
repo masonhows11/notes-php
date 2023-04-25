@@ -8,11 +8,11 @@
         <div class="col-lg-10">
             <ul class="list-unstyled ms-3">
                 <?php foreach ($posts as $post) : ?>
-                    <li>
-                        <a href="/post?id=<?= $post['id'] ?>" class="text-decoration-none text-dark">
-                            <?= htmlspecialchars($post['title']) ?>
-                        </a>
-                    </li>
+                <li>
+                    <a href="/post?id=<?= $post['id'] ?>" class="text-decoration-none text-dark">
+                        <?= htmlspecialchars($post['title']) ?>
+                    </a>
+                </li>
                 <?php endforeach; ?>
             </ul>
         </div>
@@ -27,5 +27,4 @@
 
 </div>
 
-<?php require('views/partials/footer.php') ?>
-
+<?php require base_path('views/partials/footer.php') ?>
