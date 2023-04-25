@@ -31,12 +31,10 @@ function urlIs($value)
 
 function base_path($path)
 {
-
     return BASE_PATH . $path;
 }
 
-function view($path, $attributes = [])
+function view($path)
 {
-    extract($attributes);
-    require base_path('views/' . $path);
+    return base_path('views/' . $path);
 }
