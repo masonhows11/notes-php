@@ -6,20 +6,21 @@ require basename('Validator.php');
 $config = require base_path('config.php');
 $db = new Database($config['database']);
 
+$errors_title = [];
+$errors_body = [];
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $errors_title = [];
-    $errors_body = [];
-   
 
-    if (! Validator::string($_POST['title'],1,10) ) {
+
+
+    if (!Validator::string($_POST['title'], 1, 10)) {
 
         $errors_title['title'] = 'title is required & between 1 & 10 characters';
     }
 
-    if ( ! Validator::string($_POST['body'],1,10) ) {
+    if (!Validator::string($_POST['body'], 1, 10)) {
 
         $errors_body['body'] = 'body is required & between 1 & 10 characters';
     }
@@ -31,14 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
         header("location:http://notes.test/posts");
     }
-
-
 }
 
 view("posts/create.view.php", [
-    
+
     'heading' => 'Create post',
     'errors_title' => $errors_title,
     'errors_body' => $errors_body
-    
+
 ]);
