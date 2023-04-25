@@ -38,4 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 view("posts/create.view.php", [
     
     'heading' => 'Create post',
+    'errors_title' => $errors_title,
+    'errors_body' => $errors_body
+    
 ]);
