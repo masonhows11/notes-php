@@ -2,16 +2,19 @@
 
 
 
-$heading = 'My Posts';
-
-try {
-    $config = require('config.php');
-    $db = new Database($config['database']);
-
-    $posts = $db->query('select * from posts')->all();
-}catch (\Exception $exception){
-    echo $exception->getMessage();
-}
 
 
-require "views/posts/index.view.php";
+
+$config = require('config.php');
+$db = new Database($config['database']);
+
+$posts = $db->query('select * from posts')->all();
+
+
+
+
+
+view("posts/index.view.php", [
+    'heading' => 'My Posts',
+    'posts' => $posts
+]);
