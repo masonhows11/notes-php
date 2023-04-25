@@ -1,21 +1,6 @@
 <?php
 
-//  if ($_SERVER['REQUEST_URI'] == '/') {
-//    echo "active";
-//  } else {
-//    echo " ";
-//  }
-//  echo $_SERVER['REQUEST_URI'] === '/' ? 'active' : '';
 
-// show current uri
-// echo $_SERVER['REQUEST_URI'];
-
-//    echo "<pre>";
-//    var_dump($_SERVER);
-//    echo "</pre>";
-
-
-// dd stand for var_dump & die functions
 function dd($value)
 {
     echo "<pre>";

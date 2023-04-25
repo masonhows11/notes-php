@@ -19,4 +19,5 @@ function abort($code = 404)
 
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+
 routeToController($uri, $routes);
