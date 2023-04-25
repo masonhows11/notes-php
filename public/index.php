@@ -1,6 +1,7 @@
 <?php
 
-const BASE_PATH = __DIR__ . '/../';
+// get our project path
+const BASE_PATH = __DIR__ .'/../';
 
 
 require BASE_PATH . 'functions.php';
