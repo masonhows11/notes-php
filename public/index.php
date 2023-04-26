@@ -27,15 +27,19 @@ spl_autoload_register(function ($class) {
 });
 
 // require base_path('Database.php');
-
 // require base_path('Response.php');
-
 // require base_path('core/router.php');
 
+
+//// new route system ////
+
+// create new instance from Router class
 $router = new \Core\Router();
 
+// load routes file
 $routes = require base_path('routes.php');
 
+// separate url from query string
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $method = isset($_POST['_method']) ? $_POST['_method'] : $_SERVER['REQUEST_METHOD'];

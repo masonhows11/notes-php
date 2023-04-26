@@ -28,6 +28,7 @@ class Router
 {
 
 
+    // store all route in routes file in routes array
     protected $routes = [];
 
     public function add($method,$uri,$controller){
