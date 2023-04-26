@@ -20,6 +20,7 @@
     <div class="col-lg-10">
 
         <form method="POST">
+            <input type="hidden" name="_method" value="DELETE">
             <input type="hidden" name="id" value=" <?= htmlspecialchars($post['id']) ?>">
             <button type="submit" class="btn btn-danger">Delete</button>
         </form>
