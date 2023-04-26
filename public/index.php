@@ -4,12 +4,12 @@
 const BASE_PATH = __DIR__ . '/../';
 
 
-require BASE_PATH . 'core/functions.php';
+require BASE_PATH . 'services/functions.php';
 
 spl_autoload_register(function ($class) {
 
 
-    dd($class);
+     dd($class);
     
     // require base_path("core/" . $class . '.php'); 
     // require base_path("core/{$class}.php");
@@ -26,4 +26,4 @@ spl_autoload_register(function ($class) {
 
 // require base_path('Response.php');
 
-require base_path('core/router.php');
+require base_path('services/router.php');

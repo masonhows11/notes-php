@@ -1,11 +1,11 @@
 <?php
 
 
-namespace services;
+namespace Core;
 
 use PDO;
 
-class database
+class Database
 {
     // connect to our mysql database
 

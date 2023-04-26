@@ -1,7 +1,7 @@
 <?php
 
 
-use Core\database;
+use Core\Database;
 
 
 
