@@ -14,9 +14,6 @@ $errors_body = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-
-
-
     if (!Validator::string($_POST['title'], 1, 10)) {
 
         $errors_title['title'] = 'title is required & between 1 & 10 characters';

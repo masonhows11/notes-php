@@ -17,17 +17,12 @@ spl_autoload_register(function ($class) {
     // namespace name and directory name
     // must be same 
 
-
-
     // require base_path("core/" . $class . '.php'); 
     // require base_path("core/{$class}.php");
-
 
     // Core/Database
 
     $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
-
-
     require base_path("{$class}.php");
 });
 
