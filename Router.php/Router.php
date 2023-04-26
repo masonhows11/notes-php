@@ -29,27 +29,52 @@ class Router
 {
 
 
+    
+    protected $routes = [];
+
     public function get($uri,$controller)
     {
+        $this->routes[] = [
+          'uri' => $uri,
+          'controller' => $controller,
+          'method'  => 'GET'
+        ];
     }
 
 
-    public function post()
+    public function post($uri,$controller)
     {
+        $this->routes[] = [
+            'uri' => $uri,
+            'controller' => $controller,
+            'method'  => 'POST'
+        ];
     }
 
 
-    public function delete(){
-
+    public function delete($uri,$controller){
+        $this->routes[] = [
+            'uri' => $uri,
+            'controller' => $controller,
+            'method'  => 'DELETE'
+        ];
     }
 
-    public function patch(){
-
+    public function patch($uri,$controller){
+        $this->routes[] = [
+            'uri' => $uri,
+            'controller' => $controller,
+            'method'  => 'PATCH'
+        ];
     }
 
 
-    public function put(){
-        
+    public function put($uri,$controller){
+        $this->routes[] = [
+            'uri' => $uri,
+            'controller' => $controller,
+            'method'  => 'PUT'
+        ];
     }
     
 }
