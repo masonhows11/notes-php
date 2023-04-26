@@ -7,6 +7,9 @@ $config = require base_path('config.php');
 $db = new Database($config['database']);
 $post = $db->query('select * from posts where id = :id ', ['id' => $_GET['id']])->findOrFail();
 
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+}
 // if ($post['user_id'] !== 7) {
 //     abort(Response::FORBIDDEN);
 // }

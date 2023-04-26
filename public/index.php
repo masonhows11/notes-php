@@ -12,7 +12,7 @@ spl_autoload_register(function ($class) {
     // in below code result
     // is namespace for loaded class  
     //  dd($class);
-    
+
     // like Core\Database
     // namespace name and directory name
     // must be same 
@@ -26,6 +26,7 @@ spl_autoload_register(function ($class) {
     // Core/Database
 
     $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
+
 
     require base_path("{$class}.php");
 });
