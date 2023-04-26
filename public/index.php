@@ -10,8 +10,14 @@ spl_autoload_register(function ($class) {
 
 
     // require base_path("core/" . $class . '.php'); 
+    // require base_path("core/{$class}.php");
 
-    require base_path("core/{$class}.php");
+
+    // core/Database
+
+    $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
+    
+    require base_path("{$class}.php");
 });
 
 // require base_path('Database.php');
