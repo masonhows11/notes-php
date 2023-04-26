@@ -1,7 +1,7 @@
 <?php
 
 
-namespace core;
+namespace services;
 
 use PDO;
 
