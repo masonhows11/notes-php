@@ -1,6 +1,6 @@
 <?php
 
-
+// defined namespace named Core
 namespace Core;
 
 use PDO;
