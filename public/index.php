@@ -12,7 +12,10 @@ spl_autoload_register(function ($class) {
     // in below code result
     // is namespace for loaded class  
     //  dd($class);
+    
     // like Core\Database
+    // namespace name and directory name
+    // must be same 
 
 
 
