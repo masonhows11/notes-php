@@ -1,6 +1,8 @@
 <?php
 
 // get our root project path
+use Core\Router;
+
 const BASE_PATH = __DIR__ . '/../';
 
 
@@ -34,7 +36,7 @@ spl_autoload_register(function ($class) {
 //// new route system ////
 
 // create new instance from Router class
-$router = new \Core\Router();
+$router = new Router();
 
 // load routes file
 $routes = require base_path('routes.php');

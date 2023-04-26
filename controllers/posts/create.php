@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $db->query('insert into posts(title,body,user_id) values (:title,:body,:user_id)', [
             'title' => $_POST['title'], 'body' => $_POST['body'], 'user_id' => 10,
         ]);
-        header("location:http://notes.test/posts");
+        header("location: /posts");
     }
 }
 
