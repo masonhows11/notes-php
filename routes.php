@@ -24,4 +24,4 @@ $router->get('/post','controllers/posts/show.php');
 $router->delete('/post','controllers/posts/destroy.php');
 
 $router->get('/post/create','controllers/posts/create.php');
-$router->post('/post/store','controllers/posts/create.php');
+$router->post('/post/store','controllers/posts/store.php');

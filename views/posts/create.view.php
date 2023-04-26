@@ -5,9 +5,7 @@
 <div class="container-fluid d-flex justify-content-center">
     <div class="col-lg-5">
 
-        <form method="post">
-
-            <input type="hidden" name="_method" value="POST">
+        <form method="post" action="/post/store">
 
             <div class="mb-3">
                 <label for="title" class="form-label">title</label>
