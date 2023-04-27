@@ -7,27 +7,31 @@ class App
 
     protected static $container;
 
+    // set the container obj to the static properties $container
     public static function setContainer($container)
     {
         static::$container = $container;
     }
 
-    public static function container()
+    // get the container obj to the static properties $container
+    // for use
+    public static function getContainer()
     {
         return static::$container;
     }
 
-    // we can delegate bind & resolve method from container class
+    // we can delegate bind  method from container class
     // in app class
     public static function bind($key, $resolver)
     {
-        static::container()->bind($key, $resolver);
+        static::getContainer()->bind($key, $resolver);
     }
 
-
+    // we can delegate resolve method from container class
+    // in app class
     public static function resolve($key)
     {
-        return static::container()->resolve($key);
+        return static::getContainer()->resolve($key);
     }
 
 }

@@ -1,18 +1,18 @@
 <?php
 
-
 namespace core;
-
 
 class Container
 {
 
     protected $bindings = [];
+
     // add our service like database connection
-    // to our bindings array
+    // to our bindings array using bind method
     public function bind($key, $resolver)
     {
         $this->bindings[$key] = $resolver;
+
     }
 
 
@@ -24,7 +24,6 @@ class Container
             throw new \Exception("No matching binding found for {$key}");
         }
         $resolver = $this->bindings[$key];
-
         // return function that execute database connection as result
         return call_user_func($resolver);
     }
