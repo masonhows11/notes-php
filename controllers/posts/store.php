@@ -1,7 +1,7 @@
 <?php
 
-use Core\Validator;
-use Core\Database;
+use core\Validator;
+use core\Database;
 
 //require base_path("core/".'Validator.php');
 
