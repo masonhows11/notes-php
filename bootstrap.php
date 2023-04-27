@@ -1,5 +1,5 @@
 <?php
-
+use core\App;
 use core\Container;
 use core\Database;
 
@@ -17,4 +17,7 @@ $container->bind('core\Database',function (){
 
 $db = $container->resolve('core\Database');
 
-dd($db);
+// for use container
+// means database class connection in
+// container
+App::setContainer($container);

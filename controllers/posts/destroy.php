@@ -1,10 +1,11 @@
 <?php
 
-use core\Database;
+use core\App;
 
 
-$config = require base_path('config.php');
-$db = new Database($config['database']);
+$db = App::container()->resolve('core\Database');
+
+
 
 
 $db->query('delete from posts where id = :id', [
