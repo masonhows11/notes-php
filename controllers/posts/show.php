@@ -1,14 +1,12 @@
 <?php
 
 use core\App;
-use core\database;
+use core\Database;
 
 
 $db = App::resolve(Database::class);
 
-$post =
-    $db->query('select * from posts where id = :id ', ['id' => $_GET['id']])
-        ->findOrFail();
+$post = $db->query('select * from posts where id = :id ', ['id' => $_GET['id']])->findOrFail();
 
 // if ($post['user_id'] !== 7) {
 //     abort(Response::FORBIDDEN);
