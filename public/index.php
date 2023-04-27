@@ -35,6 +35,9 @@ spl_autoload_register(function ($class) {
 
 //// new route system ////
 
+// add bootstrap file
+require base_path('bootstrap.php');
+
 // create new instance from Router class
 $router = new Router();
 
