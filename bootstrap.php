@@ -15,9 +15,9 @@ $container->bind('core\Database',function (){
 
 });
 
-$db = $container->resolve('core\Database');
-
+// $db = $container->resolve('core\Database');
 // for use container
 // means database class connection in
 // container
+
 App::setContainer($container);
