@@ -14,6 +14,9 @@ class Container
         $this->bindings[$key] = $resolver;
     }
 
+
+    // return the needed services like database connection
+    // or any class services exists in bindings array
     public function resolve($key)
     {
         if (!array_key_exists($key, $this->bindings)) {
